@@ -1,0 +1,18 @@
+# vim: sw=4 ts=4
+[user]
+	name = CHU HUANGWEI
+	email = chuhw.csie95@gmail.com
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+[push]
+	default = current
+[alias]
+    cm = commit -a
+    st = status
+    co = checkout
+    br = branch
+[core]
+	excludesfile = ~/.gitignore

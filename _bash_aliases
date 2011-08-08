@@ -1,0 +1,32 @@
+# vim: set ft=sh:
+alias ..='cd ..'
+alias ...='cd ../..'
+alias p='ps auxw'
+alias g='grep -i --color=auto'
+
+alias aqua='ssh ieon@aqua.srv.pixnet'
+alias ronny='ssh ieon@ronny.tw'
+alias is='ssh is'
+
+case $(uname -s) in
+	Linux)
+		alias ls='ls -a --color=auto'
+		alias ll='ls -alF'
+		alias la='ls -A'
+		alias junipernc='junipernc -nojava'
+		alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
+		;;
+	Darwin|FreeBSD)
+		alias ls="ls -GF"
+		alias la="ls -AF"
+		alias ll="ls -lF"
+		alias vi="vim"
+		#enables color in the terminal bash shell export
+		export CLICOLOR=1
+		#sets up the color scheme for list export
+		export LSCOLORS="ExfxcxdxbxEgEdabagacad"
+		;;
+esac
+
+alias today="date '+%Y%m%d'"
+alias h='history'
