@@ -3,6 +3,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias p='ps auxw'
 alias g='grep -i --color=auto'
+alias df='df -h'
 
 alias aqua='ssh ieon@aqua.srv.pixnet'
 alias ronny='ssh ieon@ronny.tw'
