@@ -6,7 +6,7 @@ alias g='grep -i --color=auto'
 
 alias aqua='ssh ieon@aqua.srv.pixnet'
 alias ronny='ssh ieon@ronny.tw'
-alias is='ssh is'
+alias is='ssh is.174fun.com'
 
 case $(uname -s) in
 	Linux)
