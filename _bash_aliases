@@ -5,11 +5,6 @@ alias p='ps auxw'
 alias g='grep -i --color=auto'
 alias df='df -h'
 
-alias aqua='ssh ieon@aqua.srv.pixnet'
-alias ronny='ssh ieon@ronny.tw'
-alias is='ssh is.174fun.com'
-alias itl='ssh -p 222 itl.pighouse.net'
-
 case $(uname -s) in
 	Linux)
 		alias ls='ls -a --color=auto'

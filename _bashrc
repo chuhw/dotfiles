@@ -18,3 +18,7 @@ load_rcfile ~/.bash/rc.os/`uname -s`
 load_rcfile ~/.bash/rc.host/$HOSTNAME
 load_rcfile ~/.bash/rc
 load_rcfile ~/.bash/misc
+
+if [ -f ~/.bash_local ]; then
+    source ~/.bash_local
+fi
