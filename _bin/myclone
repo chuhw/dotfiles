@@ -1,0 +1,6 @@
+#!/bin/sh
+
+GIT="/usr/bin/git"
+ECHO="/bin/echo"
+
+${GIT} clone git@is.17fun.com:$1
