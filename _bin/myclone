@@ -3,4 +3,4 @@
 GIT="/usr/bin/git"
 ECHO="/bin/echo"
 
-${GIT} clone git@is.17fun.com:$1
+${GIT} clone git@is.174fun.com:$1
