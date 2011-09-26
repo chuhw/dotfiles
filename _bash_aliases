@@ -4,6 +4,8 @@ alias ...='cd ../..'
 alias p='ps auxw'
 alias g='grep -i --color=auto'
 alias df='df -h'
+alias gitam='git commit -a -m';
+alias b='byobu -dr';
 
 case $(uname -s) in
 	Linux)
