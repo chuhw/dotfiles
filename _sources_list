@@ -1,0 +1,48 @@
+deb ftp://os.nchc.org.tw/ubuntu natty-updates main restricted universe multiverse
+deb ftp://os.nchc.org.tw/ubuntu natty main universe multiverse restricted
+deb ftp://os.nchc.org.tw/ubuntu natty-backports main universe multiverse restricted
+deb ftp://os.nchc.org.tw/ubuntu natty-proposed main universe multiverse restricted
+deb ftp://os.nchc.org.tw/ubuntu natty-security main restricted universe multiverse
+deb ftp://os.nchc.org.tw/ubuntu natty-proposed main universe multiverse restricted
+deb ftp://os.nchc.org.tw/ubuntu natty-security main restricted universe multiverse
+
+# Debian mirror By National Taiwan University
+deb http://tw.archive.ubuntu.com/ubuntu/ natty main restricted
+deb-src http://tw.archive.ubuntu.com/ubuntu/ natty main restricted
+deb http://us.archive.ubuntu.com/ubuntu/ natty main universe restricted multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ natty main universe restricted multiverse
+
+# 安全性更新伺服器
+deb http://security.ubuntu.com/ubuntu/ natty-security main universe restricted multiverse
+deb-src http://security.ubuntu.com/ubuntu/ natty-security main universe restricted multiverse
+
+# Chromium Browser (Daily Builds)
+deb http://ppa.launchpad.net/chromium-daily/ppa/ubuntu natty main
+deb-src http://ppa.launchpad.net/chromium-daily/ppa/ubuntu natty main
+
+# Swiftfox Browser
+deb http://getswiftfox.com/builds/debian unstable non-free
+
+# Ubuntu Tweak
+deb http://ppa.launchpad.net/tualatrix/ubuntu natty main
+deb-src http://ppa.launchpad.net/tualatrix/ubuntu natty main
+
+# Medibuntu Install Source (Add by Lazyscripts)
+deb http://packages.medibuntu.org/ natty free non-free
+
+# Gcin
+deb http://debian.luna.com.tw/ubuntu ./
+deb-src http://debian.luna.com.tw/ubuntu ./
+
+# Google software repository
+deb http://dl.google.com/linux/deb/ stable non-free main
+
+# Dropbox
+deb http://linux.getdropbox.com/ubuntu natty main
+deb-src http://linux.getdropbox.com/ubuntu natty main
+
+# KompoZer
+deb http://ppa.launchpad.net/giuseppe-iuculano/ppa/ubuntu natty main
+
+# Game
+deb http://archive.getdeb.net/ubuntu natty-getdeb games
