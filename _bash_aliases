@@ -18,7 +18,7 @@ case $(uname -s) in
 	Darwin|FreeBSD)
 		alias ls="ls -GF"
 		alias la="ls -AF"
-		alias ll="ls -lF"
+		alias ll="ls -alF"
 		alias vi="vim"
 		#enables color in the terminal bash shell export
 		export CLICOLOR=1
