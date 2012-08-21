@@ -10,7 +10,7 @@ alias b='byobu -dr';
 case $(uname -s) in
 	Linux)
 		alias ls='ls -a --color=auto'
-		alias ll='ls -alF'
+		alias ll='ls -alhF'
 		alias la='ls -A'
 		alias junipernc='junipernc -nojava'
 		alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
@@ -18,7 +18,7 @@ case $(uname -s) in
 	Darwin|FreeBSD)
 		alias ls="ls -aGF"
 		alias la="ls -AF"
-		alias ll="ls -alF"
+		alias ll="ls -alhF"
 		alias vi="vim"
 		#enables color in the terminal bash shell export
 		export CLICOLOR=1
