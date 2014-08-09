@@ -1,50 +1,55 @@
-call pathogen#runtime_append_all_bundles()
-" call pathogen#helptags()
-
-syntax on
-set t_Co=256
+set cindent
 set incsearch
 set hls
 set nu
 set ru
-set encoding=utf-8
-set fileencoding=utf-8
-" set mouse=a
-set modeline
-set background=dark
 set nocompatible
-set backspace=indent,eol,start
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
-set history=50
-set t_ti= t_te=
+set t_Co=256
+set termencoding=utf8
+set encoding=utf8
+set fileencodings=utf8,big5,gb
+set number
+set foldmethod=marker
+"set mouse=a
+set expandtab
 set shiftwidth=4
+set background=dark
+set t_ti= t_te=
+set history=50
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set backspace=indent,eol,start
 
-filetype plugin indent on
+syntax on
+au BufNewFile,BufRead *.phtml set filetype=php
+au BufNewFile,BufRead *.html set filetype=php
+au! BufRead,BufNewFile *.json setfiletype json 
+filetype plugin on
+au FileType javascript so ~/.vim/indent/javascript.vim
+au FileType php so ~/.vim/indent/php.vim
 
-" python syntax highlight
-let python_highlight_all = 1
-let python_sync_slow = 1
+" PHP DOC
+source ~/.vim/php-doc.vim 
+source ~/.vim/plugin/matchit.vim
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+nnoremap <C-P> :call PhpDocSingle()<CR> 
 
-" autocomplete
-autocmd FileType php set omnifunc=phpcomplete
-autocmd FileType py set omnifunc=pythoncomplete
-autocmd FileType python syntax keyword pythonDecorator True None False self
-autocmd FileType css set omnifunc=csscomplete
-autocmd BufNewFile,BufRead *.go set filetype=go sw=4 ts=4
-autocmd BufNewFile,BufRead *.php set keywordprg="help"
-autocmd BufNewFile,BufRead *.mako so set filetype=mako
-autocmd BufNewFile,BufRead *.gradle so set filetype=groovy
-autocmd BufNewFile,BufRead *.thrift if &ft == 'conf' | set filetype=thrift
+" helptags ~/.vim/doc
+" set runtimepath+=~/.vim
+set keywordprg=
 
-map th :tabprev<CR>
-map tl :tabnext<CR>
+colorscheme desert
+" vim -b : edit binary using xxd-format!
+augroup Binary
+au!
+au BufReadPre  *.bin let &bin=1
+au BufReadPost *.bin if &bin | %!xxd
+au BufReadPost *.bin set ft=xxd | endif
+au BufWritePre *.bin if &bin | %!xxd -r
+au BufWritePre *.bin endif
+au BufWritePost *.bin if &bin | %!xxd
+au BufWritePost *.bin set nomod | endif
+augroup END
 
+" map <F5> lbi<?= _('<Esc>lwi') ?><Esc>
 
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
-let NERDTreeIgnore=['\~$', '\.lo$', '\.la$']
+set complete+=k

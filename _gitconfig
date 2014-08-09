@@ -1,7 +1,7 @@
 # vim: sw=4 ts=4
 [user]
 	name = CHU HUANGWEI
-	email = chuhw.csie95@gmail.com
+	email = ieon@pixnet.tw
 [color]
 	ui = auto
 	diff = auto
@@ -14,10 +14,7 @@
     co = checkout
     br = branch
 [core]
-	excludesfile = /Users/chuhw/.gitignore
+	excludesfile = /.amd_mnt/10.4.1.1/vol/home/admin/ieon/.gitignore
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+	path =
