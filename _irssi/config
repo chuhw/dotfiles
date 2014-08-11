@@ -1,22 +1,66 @@
-# vim: set ts=2 sw=2:
 servers = (
-  { address = "irc.freenode.net"; chatnet = "freenode"; port = "6667"; },
-  { address = "irc.pixnet.tw"; chatnet = "pixnet"; port = "6667"; },
-  { address = "irc.debian.org"; chatnet = "debian"; port = "6667"; }
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.pixnet.tw";
+    chatnet = "pixnet";
+    port = "6667";
+    autoconnect = "yes";
+  }
 );
 
-chatnets = {
-	freenode = { type = "IRC"; };
-	pixnet = { type = "IRC"; };
-	debian = { type = "IRC"; };
+chatnets = { 
+    freenode = { type = "IRC"; }; 
+    pixnet = { type = "IRC"; }; 
 };
 
 channels = (
-  { name = "#pixnet"; chatnet = "freenode"; autojoin = "No"; },
-  { name = "#tossug"; chatnet = "freenode"; autojoin = "No"; },
-  { name = "#cassandra"; chatnet = "freenode"; autojoin = "No"; },
-  { name = "#dot"; chatnet = "debian"; autojoin = "No"; },
-  { name = "#android-dev"; chatnet = "freenode"; autojoin = "No"; },
+  {
+    name = "#pixnet";
+    chatnet = "freenode";
+    autojoin = "yes";
+    password = "stuunicorn";
+  },
+  {
+    name = "#pixnethealth";
+    chatnet = "pixnet";
+    autojoin = "yes";
+    password = "stuunicorn";
+  },
+  {
+    name = "#pixnetphplog";
+    chatnet = "pixnet";
+    autojoin = "yes";
+    password = "stuunicorn";
+  },
+  {
+    name = "#pixnetstaging";
+    chatnet = "pixnet";
+    autojoin = "yes";
+    password = "stuunicorn";
+  },
+  {
+    name = "#pixnetlog";
+    chatnet = "pixnet";
+    autojoin = "yes";
+    password = "stuunicorn";
+  },
+  {
+    name = "#pixnetcommit";
+    chatnet = "pixnet";
+    autojoin = "yes";
+    password = "stuunicorn";
+  },
+  {
+    name = "#hlphplog";
+    chatnet = "pixnet";
+    autojoin = "yes";
+    password = "stuunicorn";
+  }
 );
 
 aliases = {
@@ -58,15 +102,13 @@ aliases = {
   GOTO = "sb goto";
   CHAT = "dcc chat";
   RUN = "SCRIPT LOAD";
-  CALC = "exec - if command -v bc >/dev/null 2>&1\\; then printf '%s=' '$*'\\; echo '$*' | bc -l\\; else echo bc was not found\\; fi";
+  CALC = "exec - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
   SBAR = "STATUSBAR";
   INVITELIST = "mode $C +I";
   Q = "QUERY";
   "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
   EXEMPTLIST = "mode $C +e";
   ATAG = "WINDOW SERVER";
-  UNSET = "set -clear";
-  RESET = "set -default";
 };
 
 statusbar = {
@@ -94,7 +136,7 @@ statusbar = {
     prompt = "{prompt $[.15]itemname}";
     prompt_empty = "{prompt $winname}";
     topic = " $topic";
-    topic_empty = " Irssi v$J - http://www.irssi.org";
+    topic_empty = " Irssi v$J - http://irssi.org/help/";
 
     # all of these treated specially, they're only displayed when needed
     lag = "{sb Lag: $0-}";
@@ -181,6 +223,24 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "Gasol Wu"; user_name = "gasol_tw"; nick = "gasol"; };
+  core = {
+    real_name = "ieon";
+    user_name = "ieon";
+    nick = "ieon";
+    recode = "yes";
+  };
+  "fe-common/core" = {
+    autolog = "yes";
+    autolog_path = "~/.irssi/irclog/$tag.$0.%Y.%m";
+    theme = "litE";
+    beep_when_window_active = "yes";
+    beep_when_away = "yes";
+    beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+    bell_beeps = "yes";
+  };
   "fe-text" = { actlist_sort = "refnum"; };
 };
+conversions = { "#pixnet" = "utf-8"; };
+logs = { };
+hilights = ( { text = "ieon"; nick = "yes"; word = "yes"; } );
+ignores = ( { level = "JOINS QUITS"; } );
