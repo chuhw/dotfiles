@@ -1,7 +1,7 @@
 # vim: sw=4 ts=4
 [user]
 	name = CHU HUANGWEI
-	email = ieon@pixnet.tw
+	email = chuhw.csie95@gmail.com
 [color]
 	ui = auto
 	diff = auto
@@ -15,6 +15,7 @@
     br = branch
 [core]
 	excludesfile = /.amd_mnt/10.4.1.1/vol/home/admin/ieon/.gitignore
+	compression = 0
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =

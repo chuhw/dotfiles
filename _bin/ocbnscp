@@ -1,6 +1,0 @@
-#!/bin/sh
-
-SCP="/usr/bin/scp"
-ECHO="/bin/echo"
-
-${SCP} -P 222 $1 chuhw@117.56.121.1:~/
