@@ -1,5 +1,21 @@
+# macOS
 .DS_Store
+
+# Vim
 *.swp
-*.db
-_vim/.netrwhist
-_irssi/startup
+*.swo
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Local env
+.env
+.env.local
+
+# OS
+Thumbs.db
+Desktop.ini

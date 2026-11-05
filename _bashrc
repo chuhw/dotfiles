@@ -22,3 +22,8 @@ load_rcfile ~/.bash/misc
 if [ -f ~/.bash_local ]; then
     source ~/.bash_local
 fi
+
+# Created by `pipx` on 2024-08-17 13:27:27
+export PATH="$PATH:/Users/chuhw/.local/bin"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$JAVA_HOME/bin:$PATH

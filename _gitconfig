@@ -14,8 +14,10 @@
     co = checkout
     br = branch
 [core]
-	excludesfile = /.amd_mnt/10.4.1.1/vol/home/admin/ieon/.gitignore
+	excludesfile = /Users/chuhw/.gitignore
 	compression = 0
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
+[pull]
+	rebase = false
